@@ -1,0 +1,82 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --link: #2b5c8a;
+  --border: #e5e5e5;
+  --max-width: 980px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background: #fff;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 0;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.site-title a { color: var(--text); }
+.site-nav {
+  display: flex;
+  gap: 1.7rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  padding-bottom: .8rem;
+  color: #444;
+}
+.site-nav a.active {
+  color: var(--link);
+  border-bottom: 2px solid var(--link);
+}
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+h1 { font-size: 1.7rem; margin-top: 0; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+.profile {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.profile-photo {
+  width: 170px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+.profile-text { flex: 1; }
+.pub-list { padding-left: 1.5rem; }
+.pub-list li { margin-bottom: .85rem; }
+.course-list { padding-left: 1.5rem; }
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .9rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  .profile { flex-direction: column; }
+  .profile-photo { width: 150px; height: auto; }
+  .site-nav { gap: 1rem; }
+}
